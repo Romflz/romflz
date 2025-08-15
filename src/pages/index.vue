@@ -5,14 +5,7 @@
         <h1 class="text-2xl font-bold">Hi</h1>
       </div>
     </template>
-    <template v-slot:content>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident deserunt voluptates unde eius. Illum sapiente dicta illo natus veritatis, maxime cumque, a
-          deleniti id distinctio dolorem perspiciatis atque. Quos.
-        </p>
-      </div>
-    </template>
+    <template v-slot:content></template>
   </DefaultLayout>
 </template>
 

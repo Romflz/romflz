@@ -1,10 +1,13 @@
 <template>
   <DefaultLayout>
-    <div class="text-center">
-      <h1 class="text-3xl font-bold mb-6">Contact</h1>
-    </div>
+    <template v-slot:header>
+      <div class="header">
+        <h1 class="text-2xl font-bold">Contact</h1>
+      </div>
+    </template>
   </DefaultLayout>
 </template>
+
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 </script>
