@@ -1,11 +1,20 @@
 <template>
-  <header class="bg-blue-600 text-white p-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Template</h1>
+  <header class="bg-white py-6 px-8 text-gray-600">
+    <div class="flex items-center justify-end">
       <nav>
         <ul class="flex space-x-4">
-          <li><RouterLink to="/" class="hover:text-blue-200">Home</RouterLink></li>
-          <li><RouterLink to="/about" class="hover:text-blue-200">About</RouterLink></li>
+          <li>
+            <RouterLink to="/" class="nav-link">Home</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/portfolio" class="nav-link">Portfolio</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/blog" class="nav-link">Blog</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/contact" class="nav-button">Contact</RouterLink>
+          </li>
         </ul>
       </nav>
     </div>

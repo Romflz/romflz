@@ -1,20 +1,21 @@
 <template>
   <DefaultLayout>
-    <div class="text-center">
-      <h1 class="text-3xl font-bold mb-6">Home</h1>
-
-      <div class="flex flex-col items-center space-y-4">
-        <p class="text-lg text-gray-600">Counter: {{ counter.count }}</p>
-        <Button @click="counter.increment">Increment Counter</Button>
+    <template v-slot:header>
+      <div class="header">
+        <h1 class="text-2xl font-bold">Hi</h1>
       </div>
-    </div>
+    </template>
+    <template v-slot:content>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident deserunt voluptates unde eius. Illum sapiente dicta illo natus veritatis, maxime cumque, a
+          deleniti id distinctio dolorem perspiciatis atque. Quos.
+        </p>
+      </div>
+    </template>
   </DefaultLayout>
 </template>
 
 <script setup lang="ts">
-import { useCounterStore } from '@/stores/counter'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import Button from '@/components/Button.vue'
-
-const counter = useCounterStore()
 </script>

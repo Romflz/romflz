@@ -1,12 +1,19 @@
 <template>
-  <div class="min-h-screen flex flex-col">
-    <Header />
+  <div class="h-screen w-full bg-brand-orange flex flex-col p-6">
+    <Header class="flex-shrink-0 z-10"></Header>
 
-    <main class="flex-1 container mx-auto px-4 py-8">
-      <slot />
+    <main class="flex-1 bg-white overflow-y-auto no-scrollbar z-5 px-6 flex flex-col">
+      <div class="h-full flex-shrink-0 flex items-center justify-center relative">
+        <slot name="header" />
+        <span class="absolute bottom-0">scroll</span>
+      </div>
+
+      <div>
+        <slot name="content" />
+      </div>
     </main>
 
-    <Footer />
+    <Footer class="flex-shrink-0 z-10"></Footer>
   </div>
 </template>
 
