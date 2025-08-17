@@ -141,6 +141,11 @@ h6 {
 }
 
 /* GENERAL CSS */
+.animated-gradient-subtle {
+  background: linear-gradient(135deg, #f26b38 0%, #ff8c5a 25%, #f2522e 50%, #ff7648 75%, #f26b38 100%);
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
 
 /* ANIMATIONS */
 @keyframes bounce {
@@ -162,5 +167,17 @@ h6 {
     -webkit-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     transform: translateY(-15px);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }

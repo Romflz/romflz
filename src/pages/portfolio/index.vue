@@ -2,7 +2,7 @@
   <DefaultLayout>
     <template v-slot:header>
       <div class="header">
-        <h1 class="text-2xl font-bold">Portfolio</h1>
+        <h1 class="text-2xl font-bold">/Portfolio</h1>
       </div>
     </template>
   </DefaultLayout>
