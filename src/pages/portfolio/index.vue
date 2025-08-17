@@ -6,11 +6,14 @@
       </div>
     </template>
     <template v-slot:content>
-      <div class="content"></div>
+      <div class="content max-w-4xl m-auto">
+        <PortfolioList />
+      </div>
     </template>
   </DefaultLayout>
 </template>
 
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import PortfolioList from '@/components/PortfolioList.vue'
 </script>

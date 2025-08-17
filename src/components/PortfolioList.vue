@@ -4,27 +4,27 @@
       <li
         v-for="experience in workExperiences"
         :key="experience.id"
-        class="experience-item w-1/4 aspect-square py-1 px-1 first:pl-0 last:pr-0"
+        class="experience-item w-1/3 aspect-8/10 odd:bg-brand-orange-200"
       >
-        <div
-          class="container w-full h-full border border-solid border-brand-orange-200"
-        >
-          <h3 class="job-title">{{ experience.title }}</h3>
-          <span class="company-name">{{ experience.company }}</span>
-          <span class="employment-period">
-            {{ formatEmploymentPeriod(experience.period) }}
-          </span>
+        <div class="company-info">
+          <img
+            v-if="experience.logo"
+            :src="experience.logo"
+            :alt="`${experience.company} logo`"
+            class="company-logo"
+          />
+          <div class="company-details">
+            <h3 class="job-title">{{ experience.title }}</h3>
+            <span class="company-name">{{ experience.company }}</span>
+            <span class="employment-period">
+              {{ formatEmploymentPeriod(experience.period) }}
+            </span>
+          </div>
         </div>
-      </li>
-      <li
-        class="experience-item w-1/4 aspect-square py-1 px-1 first:pl-0 last:pr-0"
-      >
-        <div
-          class="container text-white flex items-center justify-center w-full h-full border border-solid border-brand-orange-200 bg-brand-orange-200"
-        >
-          <h3 class="job-title">View More</h3>
-          <span class="company-name"></span>
-          <span class="employment-period"> </span>
+        <div class="tags-container">
+          <span v-for="tag in experience.tags" :key="tag" class="tag">
+            {{ tag }}
+          </span>
         </div>
       </li>
     </ul>
@@ -68,6 +68,15 @@ const workExperiences: WorkExperience[] = [
     period: {
       from: 2019,
       to: 2020,
+    },
+  },
+  {
+    id: 'exp-4',
+    title: 'Junior Developer',
+    company: 'StartupXYZ',
+    tags: ['startup', 'tech', 'e-commerce'],
+    period: {
+      from: 2018,
     },
   },
 ]
