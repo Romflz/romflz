@@ -9,6 +9,7 @@
   --animate-slide-up: slide-up 0.35s var(--ease-out);
 
   --color-brand-orange: #f26b38;
+  --color-brand-orange-200: #ff8c5a;
 
   @keyframes fade-in {
     from {

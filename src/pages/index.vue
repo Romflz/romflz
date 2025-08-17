@@ -7,8 +7,8 @@
       </div>
     </template>
     <template v-slot:content>
-      <div class="content">
-        <ExperienceList />
+      <div class="content max-w-5xl m-auto" >
+        <ExperienceList class="my-24" />
       </div>
     </template>
   </DefaultLayout>

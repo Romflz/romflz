@@ -1,23 +1,25 @@
 <template>
-  <ul class="experience-list">
-    <li v-for="experience in workExperiences" :key="experience.id" class="experience-item">
-      <div class="company-info">
-        <img v-if="experience.logo" :src="experience.logo" :alt="`${experience.company} logo`" class="company-logo" />
-        <div class="company-details">
-          <h3 class="job-title">{{ experience.title }}</h3>
-          <span class="company-name">{{ experience.company }}</span>
-          <span class="employment-period">
-            {{ formatEmploymentPeriod(experience.period) }}
+  <div class="flex items-center justify-center">
+    <ul class="experience-list flex flex-wrap">
+      <li v-for="experience in workExperiences" :key="experience.id" class="experience-item w-1/3 aspect-square odd:bg-brand-orange-200">
+        <div class="company-info">
+          <img v-if="experience.logo" :src="experience.logo" :alt="`${experience.company} logo`" class="company-logo" />
+          <div class="company-details">
+            <h3 class="job-title">{{ experience.title }}</h3>
+            <span class="company-name">{{ experience.company }}</span>
+            <span class="employment-period">
+              {{ formatEmploymentPeriod(experience.period) }}
+            </span>
+          </div>
+        </div>
+        <div class="tags-container">
+          <span v-for="tag in experience.tags" :key="tag" class="tag">
+            {{ tag }}
           </span>
         </div>
-      </div>
-      <div class="tags-container">
-        <span v-for="tag in experience.tags" :key="tag" class="tag">
-          {{ tag }}
-        </span>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script setup lang="ts">
