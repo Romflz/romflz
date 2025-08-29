@@ -1,5 +1,5 @@
 <template>
-  <DefaultLayout :hasContent="true">
+  <DefaultLayout :hasContent="false">
     <template v-slot:header>
       <div class="header text-center">
         <h1 ref="heading" class="text-2xl font-bold">Hi, I'm Roman</h1>
@@ -7,12 +7,7 @@
           A fullstack developer based in
           <span class="text-brand-orange">Malta</span>
         </p>
-      </div>
-    </template>
-    <template v-slot:content>
-      <div class="content max-w-4xl m-auto">
-        <AboutBlock class="mb-6" />
-        <ExperienceList />
+        <p>Checkout <span class="text-brand-orange">/portfolio</span> section for more info</p>
       </div>
     </template>
   </DefaultLayout>
@@ -20,8 +15,6 @@
 
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import ExperienceList from '@/components/ExperienceList.vue'
-import AboutBlock from '@/components/AboutBlock.vue'
 
 import { onMounted } from 'vue'
 import { scrambleText } from '@/utils/animation.utils'
